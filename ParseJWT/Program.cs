@@ -3,17 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-string token;
-
-if (args.Length == 0)
-{
-    Console.Write("Enter Token: ");
-    token = Console.ReadLine();
-}
-else
-{
-    token = args[0];
-}
+var token = args.Length == 0 ? Console.ReadLine() : args[0];
 
 var handler = new JwtSecurityTokenHandler();
 
